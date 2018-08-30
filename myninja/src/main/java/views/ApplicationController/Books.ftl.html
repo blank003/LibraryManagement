@@ -1,0 +1,103 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : BlackPolish
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20121026
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>UBILIBRARY</title>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Abel|Satisfy' rel='stylesheet' type='text/css' />
+    <link href="../../assets/css/style1.css" rel="stylesheet" type="text/css" media="screen" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script src="../../assets/css/js/hello.js"></script>
+    <style >
+
+        table, th, td {
+            border: 1px solid black;
+            margin-left: 260px;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <div id="header-wrapper">
+        <div id="header" class="container">
+            <div id="logo">
+                <h1><a href="#">UBILIBRARY</a></h1>
+            </div>
+            <div id="menu">
+                <ul>
+                    <li><a href="Welcome.ftl.html">Homepage</a></li>
+                    <li class="current_page_item"><a href="Books.ftl.html">Books</a></li>
+                    <li><a href="#">Latest Issues</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="banner">
+            <div class="content">
+                <div><img src="../../assets/css/Images/fir.jpg" width="1000" height="400" alt="" /></div>
+            </div>
+        </div>
+    </div>
+    <!-- end #header -->
+    <div id="page">
+        <div class="post">
+            <h4 class="title"><a href="#">Welcome to UbiLibrary </a></h4>
+            <div class="entry">
+                <p>This is <strong>UbiLibrary</strong>, a free, fully standards-compliant library management system .A lot of Books are available here to view for free.Following are the books that are available here.For more information you can visit our Facebook Page <a href="http://templated.co/license">Know More</a> license, so you're pretty much free to learn here as much as you want. </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="books">
+    <hr>
+    <h2>All Books</h2>
+    <hr>
+</div>
+
+<div ng-style="chec" ng-controller="Hello" ng-app="demo">
+        <!--<ul ng-repeat="res in result">-->
+        <!--<li>{{res.bookName}} | {{res.bookAuthor}} | {{res.bookAvail}}</li>-->
+        <!--</ul>-->
+    
+        <table class="table-striped" >
+            <thead>
+            <tr>
+                <th>BOOK_NAME</th>
+                <th>AUTHOR</th>
+                <th>AVAILABILITY</th>
+            </tr>
+            </thead>
+            <tbody >
+            <div >
+                <tr ng-repeat="res in result">
+                    <td  ng-style="myObj"> {{ res.bookName }}.</td>
+                    <td  ng-style="myObj"> {{res.bookAuthor}} </td>
+                    <td  ng-style="myObj">{{res.bookAvail}}</td>
+                    <td  ng-style="myObj"> <button class="buttonss-3"  id="delete_row" onclick="">ISSUE</button> </td>
+                </tr>
+            </div>
+            </tbody>
+        </table>
+    <!-- end #page -->
+</div>
+
+<div id="footer">
+    <p>&copy; Untitled. All rights reserved. Images by Me. Design by Me.</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>

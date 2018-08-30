@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+    <title>Hello AngularJS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script src="../../assets/css/js/hello.js"></script>
+</head>
+
+<body>
+<div ng-controller="Hello" ng-app="demo">
+    <!--<ul ng-repeat="res in result">-->
+        <!--<li>{{res.bookName}} | {{res.bookAuthor}} | {{res.bookAvail}}</li>-->
+    <!--</ul>-->
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>BOOK_NAME</th>
+            <th>AUTHOR</th>
+            <th>AVAILABILITY</th>
+        </tr>
+        </thead>
+        <tbody>
+        <div>
+            <tr ng-repeat="res in result">
+                <td> {{ res.bookName }}.</td>
+                <td> {{res.bookAuthor}} </td>
+                <td>{{res.bookAvail}}</td>
+            </tr>
+        </div>
+        </tbody>
+    </table>
+
+</div>
+</body>
+</html>

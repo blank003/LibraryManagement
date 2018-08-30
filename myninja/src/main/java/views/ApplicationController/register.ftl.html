@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Login Form Design</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
+<body>
+<div class="loginbox">
+    <img src="../../assets/css/Images/avatar.png" class="avatar">
+    <h1>REGISTER</h1>
+    <form name="Form" method="post" onsubmit="validateForm()">
+        <div>
+            <p>Username</p>
+            <span><input type="text" placeholder="Enter Username" id="01"
+                         name="userId" /></span>
+        </div>
+        <div>&nbsp;</div>
+        <div>
+            <p>Password</p>
+            <span><input type="text" placeholder="Enter Password" id="02"
+                         name="password" /></span>
+        </div>
+
+        <input type="submit" name="" value="Register" onclick="javascript: form.action='/doSignup';">
+
+    </form>
+</div>
+</body>
+</head>
+</html>

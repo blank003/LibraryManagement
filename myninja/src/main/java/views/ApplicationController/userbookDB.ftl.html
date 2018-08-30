@@ -1,0 +1,133 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>UBILIBRARY</title>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Abel|Satisfy' rel='stylesheet' type='text/css' />
+    <link href="../../assets/css/style1.css" rel="stylesheet" type="text/css" media="screen" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script src="../../assets/css/js/hello1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+
+        table, th, td {
+            border: 1px solid black;
+            margin-left: 260px;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <div id="header-wrapper">
+        <div id="header" class="container">
+            <div id="logo">
+                <h1><a href="#">UBILIBRARY</a></h1>
+            </div>
+            <div id="menu">
+                <ul>
+                    <li class="current_page_item"><a href="#">AdminHomepage</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="banner">
+            <div class="content">
+                <div><img src="../../assets/css/Images/bot.gif" width="1000" height="400" alt="" /></div>
+            </div>
+        </div>
+    </div>
+    <!-- end #header -->
+    <div id="page">
+        <div class="post">
+            <h4 class="title"><a href="#">Welcome to UbiLibrary Admin Console </a></h4>
+        </div>
+        <div id="menu1">
+            <ul>
+                <li><a href="userDB">Modify Book DB</a></li>
+                <li class="current_page_item"><a href="userbookDB">Modify User DB</a></li>
+                <li><a href="Addbook">Add Books</a></li>
+
+            </ul>
+        </div>
+    </div>
+
+    <!-- end #page -->
+</div>
+<div id="user">
+    <hr>
+    <h2>All Users</h2>
+    <hr>
+</div>
+
+<div ng-controller="Hello" ng-app="demo">
+    <!--<ul ng-repeat="res in result">-->
+    <!--<li>{{res.userId}} | {{res.password}}</li>-->
+    <!--</ul>-->
+    <table class="table-striped" id="table1">
+        <thead>
+        <tr>
+            <th>USER_NAME</th>
+            <th>PASSWORD</th>
+        </tr>
+        </thead>
+        <tbody>
+        <div >
+            <tr ng-repeat="res in result">
+                <td  ng-style="myObj"> {{ res.userId }}.</td>
+                <td  ng-style="myObj"> {{res.password}} </td>
+
+                <!--<td>{{results}}</td>-->
+              <!--  <td  ng-style="myObj"> <button  class="buttonss" name="{{res.id}}" id="delete_row1" ng-click="submitResult(res.results,res)">CHANGE</button></td>-->
+                <td  ng-style="myObj"> <button class="buttonss" name = {{res.id}} id="delete_row" onclick="deleteRow(this)">DELETE</button> </td>
+            </tr>
+        </div>
+        </tbody>
+    </table>
+
+</div>
+
+
+<!--<div id="footer-content-wrapper">-->
+    <!--<div id="footer-content">-->
+        <!--<div id="fbox1">-->
+            <!--<h2>Fusce ultrices fringilla</h2>-->
+            <!--<ul class="style1">-->
+                <!--<li class="first"><a href="#">Maecenas luctus lectus at sapien</a></li>-->
+                <!--<li><a href="#">Etiam rhoncus volutpat erat</a></li>-->
+                <!--<li><a href="#">Etiam posuere augue sit amet nisl</a></li>-->
+                <!--<li><a href="#">Mauris vulputate dolor sit amet nibh</a></li>-->
+                <!--<li><a href="#">Etiam posuere augue sit amet nisl</a></li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <!--<div id="fbox2">-->
+            <!--<h2>Nulla luctus eleifend</h2>-->
+            <!--<ul class="style1">-->
+                <!--<li class="first"><a href="#">Maecenas luctus lectus at sapien</a></li>-->
+                <!--<li><a href="#">Etiam rhoncus volutpat erat</a></li>-->
+                <!--<li><a href="#">Etiam posuere augue sit amet nisl</a></li>-->
+                <!--<li><a href="#">Mauris vulputate dolor sit amet nibh</a></li>-->
+                <!--<li><a href="#">Etiam posuere augue sit amet nisl</a></li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <!--<div id="fbox3">-->
+            <!--<h2>Maecenas luctus lectus</h2>-->
+            <!--<ul class="style1">-->
+                <!--<li class="first"><a href="#">Maecenas luctus lectus at sapien</a></li>-->
+                <!--<li><a href="#">Etiam rhoncus volutpat erat</a></li>-->
+                <!--<li><a href="#">Etiam posuere augue sit amet nisl</a></li>-->
+                <!--<li><a href="#">Mauris vulputate dolor sit amet nibh</a></li>-->
+                <!--<li><a href="#">Etiam posuere augue sit amet nisl</a></li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<div id="footer">
+    <p>&copy; Untitled. All rights reserved. Images by Me. Design by Me.</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>

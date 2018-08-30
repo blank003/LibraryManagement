@@ -1,0 +1,5 @@
+entity\User.class
+controllers\ApplicationController.class
+filter\LoginFilter.class
+conf\Module.class
+conf\Routes.class
